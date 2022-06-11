@@ -1,0 +1,101 @@
+html {
+    display: flex;
+    height: 100vh;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(66, 64, 64);
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 373px;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgb(168, 110, 1);
+}
+
+.screen {
+    display: flex;
+    flex: 1 1 auto;
+    background-color: rgba(235, 238, 240, 0.925);
+    box-shadow: 0px 0px 3px 3px grey;
+    margin: 20px 20px;
+    border-radius: 5px;
+}
+
+.bod {
+    display: flex;
+    padding: 1px 1px;
+    flex-grow: 4.5;
+    background-color: gray;
+    border-radius: 1px 1px 5px 5px;
+    box-shadow: 2px 2px rgb(168, 110, 1);
+}
+
+body h1 {
+    display: flex;
+    color: orange;
+    text-shadow: 2px 2px black;
+}
+
+.numButtons {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.numButtons button {
+    background: rgb(180, 189, 189);
+
+}
+
+.numButtons button:hover {
+    background: rgb(147, 153, 153);
+}
+
+.arithmetic1 {
+    display: flex;
+    flex: 1;
+}
+
+.arithmetic1 button {
+    background: rgb(52, 115, 231);
+}
+
+.arithmetic1 button:hover {
+    background: rgb(43, 103, 214);
+}
+
+.arithmetic2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.arithmetic2 button {
+    background: rgb(52, 115, 231);
+}
+
+.arithmetic2 button:hover {
+    background: rgb(43, 103, 214);
+}
+
+.frame button {
+    display: flex;
+    flex: 1;
+    padding: 27px;
+    text-align: center;
+    justify-content: center;
+    margin: 0px;
+}
+
+.rightSide {
+    display: flex;
+}
