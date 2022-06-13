@@ -1,36 +1,27 @@
-// arithmetic functions
-const add = function (a, b) {
-    return a + b
-};
+let screen = document.querySelector('.output')
 
-const subtract = function (a, b) {
-    return a - b
-};
+let buttons = Array.from(document.getElementsByClassName('button'))
 
-const sum = function (nums) {
-    let sumAll = nums.reduce((num1, num2) => num1 + num2, 0)
-    return sumAll
-};
-
-const multiply = function (nums) {
-    let multiplyAll = nums.reduce((num1, num2) => num1 * num2)
-    return multiplyAll
-
-};
-
-const power = function (a, b) {
-    return a ** b
-};
-
-const factorial = function (num) {
-    let answer = 1
-    if (num == 0 || num == 1) {
-        return answer
-    } else {
-        for (let i = num; i >= 1; i--) {
-            answer = answer * i
+buttons.map(button => {
+    button.addEventListener('click', (e) => {
+        switch (e.target.innerText) {
+            case 'AC':
+                screen.innerText = '';
+                break;
+            case '←':
+                if (screen.innerText) {
+                    screen.innerText = screen.innerText.slice(0, -1);
+                }
+                break;
+            case '=':
+                try {
+                    screen.innerText = eval(screen.innerText)
+                } catch {
+                    screen.innerText = 'ERROR'
+                }
+                break;
+            default:
+                screen.innerText += e.target.innerText;
         }
-        return answer
-    }
-};
-
+    })
+})
